@@ -5,6 +5,7 @@ import MedicalTreatmentList from './MedicalTreatmentList';
 import MedicalTreatmentPanel from './MedicalTreatmentPanel';
 
 
+
 export default function App() {
   const MedicalTreatList = [
     {
@@ -33,31 +34,45 @@ export default function App() {
     }];
     const someJsonRecord = JSON.stringify(MedicalTreatList);
   return (
-    <div>
-      <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'London')">task1</button>
-      <button class="tablinks" onclick="openCity(event, 'Paris')">task2</button>
-      <button class="tablinks" onclick="openCity(event, 'Tokyo')">task3</button>
-      </div>
+
+
+    <div class="container">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#tab1">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tab2">Menu 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tab3">Menu 2</a>
+      </li>
+    </ul>
+  
+
+    <div class="tab-content">
+      <div id="tab1" class="container tab-pane active"><br></br>
+  
       <MedicalTreatment patientName = "John" treatId = "123"  treatCourseId = "345" type= "m" category = "ill" startDate = {Date()}/>
+  
+  
+      </div>
+      <div id="tab2" class="container tab-pane fade"><br></br>
       <MedicalTreatmentList patientJson={someJsonRecord}/>
+  
+  
+  
+      </div>
+      <div id="tab3" class="container tab-pane fade"><br></br>
+  
       <MedicalTreatmentPanel/>
-      <script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
-   
+     
+  
+  
+  
+      </div>
     </div>
+    </div>
+  
   );
 }
