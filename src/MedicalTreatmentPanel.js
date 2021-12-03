@@ -52,7 +52,7 @@ function MedicalTreatmentPanel(){
       <button onClick={OnChangeHandler} class="btn btn-primary"> SHOW </button>
       <br/>
       <div>
-        {items.map((entryValues)=><li>{entryValues+"."}</li>)}   
+        {items.map((entry)=><li>{e+"."}</li>)}   
       </div>
   
       </form>
