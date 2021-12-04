@@ -2,7 +2,10 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
-function MedicalTreatmentPanel(){
+function MedicalTreatmentPanel(props){
+
+  const { children, value, index, ...other } = props;
+
   const [items, setItems]= React.useState([]);
   const [treatId, setTreatId] = React.useState('');
   
@@ -24,7 +27,20 @@ function MedicalTreatmentPanel(){
   <h1 class="myHeader">
 
     Medical Treatment Panel</h1>    
-
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  
 
   <div class="mydiv">
     <label class="lbl">Treat ID</label> 
