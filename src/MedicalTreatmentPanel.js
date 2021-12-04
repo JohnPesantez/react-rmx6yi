@@ -17,7 +17,7 @@ function MedicalTreatmentPanel(){
   const [startDate, setStartDate]=React.useState('');
   
   const OnChangeHandler =()=>{ 
-    setItems([...items,[treatId," " + treatCourseId, " " + type, " " +  category, " " + name," " + startDate]]);}
+    setItems([...items,[treatId, treatCourseId, type,  category, name, startDate]]);}
 
   return (
     <div class="mydiv">
