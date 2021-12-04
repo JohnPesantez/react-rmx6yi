@@ -2,7 +2,7 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
-function MedicalTreatmentPanel(props){
+function MedicalTreatmentPanel(){
   const [items, setItems]= React.useState([]);
   const [treatId, setTreatId] = React.useState('');
   
