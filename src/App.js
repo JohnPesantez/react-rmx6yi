@@ -1,7 +1,9 @@
 import React from 'react';
 import './style.css';
 import MedicalTreatmentPanel from './MedicalTreatmentPanel'
-
+import "//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js";
+import "//code.jquery.com/jquery-1.11.1.min.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 export default function App() {
 
   return (
@@ -24,10 +26,10 @@ export default function App() {
                 </div>
                 <div class="panel-body">
                     <div class="tab-content">
-                    <div class="tab-pane fade" id="tab1">hello</div>
-                        <div class="tab-pane active" id="tab2">
+                    <div class="tab-pane active" id="tab1">hello</div>
+                        <div class="tab-pane" id="tab2">
                           <MedicalTreatmentPanel/></div>
-                        <div class="tab-pane fade" id="tab3">Hello</div>
+                        <div class="tab-pane" id="tab3">Hello</div>
                         </div>
                 </div>
             </div>
