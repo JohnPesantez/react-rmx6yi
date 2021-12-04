@@ -57,7 +57,7 @@ function MedicalTreatmentPanel(){
   </div>
 
   <div class="mydiv">
-      <button class="btn btn-outline-primary" onClick={OnChangeHandler}> SHOW </button>
+      <button class="form-control btn-outline-primary" onClick={OnChangeHandler}> SHOW </button>
       <br/>
       <div>
         {items.map((entry)=><li>{entry+"."}</li>)}   
