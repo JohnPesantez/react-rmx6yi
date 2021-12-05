@@ -7,6 +7,32 @@ import '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js';
 import '//code.jquery.com/jquery-1.11.1.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
+  const MedicalTreatList = [
+    {
+     treatId:"1", 
+      patientName:"John",
+      treatCourseId:"345",
+      type:"m",
+      category:"ill",
+      startDate:"12/12/2021"
+    },
+    { 
+      treatId:"2",
+      patientName:"Timmy",treatCourseId:"567",type:"m",category:"sore throat",startDate:"12/12/2021"
+    },
+    { 
+      treatId:"3",
+      patientName:"Sara",treatCourseId:"891",type:"f",category:"headache",startDate:"12/10/2021"
+    },
+    { 
+      treatId:"3",
+      patientName:"Sara",treatCourseId:"324",type:"m",category:"broken arm",startDate:"13/12/2021"
+    },
+    { 
+      treatId:"3",
+      patientName:"Sara",treatCourseId:"891",type:"f",category:"broken arm",startDate:"15/12/2021"
+    }];
+    const someJsonRecord = JSON.stringify(MedicalTreatList);
   return (
     <div class="container">
       <div class="row">
@@ -48,7 +74,7 @@ export default function App() {
                   />{' '}
                 </div>
                 <div class="tab-pane" id="tab2">
-                    <MedicalTreatmentList/>
+                    <MedicalTreatmentList patientJson={someJsonRecord}/>
                 </div>
                 <div class="tab-pane" id="tab3">
                   <MedicalTreatmentPanel />
