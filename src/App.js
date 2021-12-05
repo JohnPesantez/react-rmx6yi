@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import MedicalTreatment from 'MedicalTreament';
 import MedicalTreatmentPanel from './MedicalTreatmentPanel'
 import "//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js";
 import "//code.jquery.com/jquery-1.11.1.min.js";
@@ -26,7 +27,7 @@ export default function App() {
                 </div>
                 <div class="panel-body">
                     <div class="tab-content">
-                    <div class="tab-pane active" id="tab1">hello</div>
+                    <div class="tab-pane active" id="tab1"> <MedicalTreatment patientName = "John" treatId = "123"  treatCourseId = "345" type= "m" category = "ill" startDate = {Date()}/>  </div>
                         <div class="tab-pane" id="tab2">
                           <MedicalTreatmentPanel/></div>
                         <div class="tab-pane" id="tab3">Hello</div>
