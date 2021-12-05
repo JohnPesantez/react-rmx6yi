@@ -14,7 +14,7 @@ export default function App() {
 		<div class="col-md-6 col-md-offset-3">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Panel title</h3>
+                    <h3 class="panel-title">Assignment 1</h3>
                     <span class="pull-right">
                         
                         <ul class="nav panel-tabs">
