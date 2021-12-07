@@ -13,9 +13,8 @@ function MedicalTreatmentList(props){
     {Patient.category},
     {Patient.startDate}
    </li>);
-   const listPatientByCat= patients.filter(Patient=>Patient.category==incategory).map(Pfiltered=>(
-    <li>{Pfiltered}</li>));
-/*
+   
+
     const listPatientByCat= patients.filter(Patient=>Patient.category==incategory).map(Pfiltered=>(
     <li>
       {Pfiltered.treatId},  
@@ -25,14 +24,14 @@ function MedicalTreatmentList(props){
       {Pfiltered.category},
       {Pfiltered.startDate}
     </li>));
-*/
+
 return (
     <div>
       <h1>Medical Treatment List are:</h1>
       {listpatientJSON}  
       <br/><br/>
       <h2>Medical Treatment List by categories</h2>
-      <input type="text" placeholder="search patient by a category" value={incategory} onChange={(e)=> setInCategory(e.target.value)}/>
+      <input type="text" placeholder="search patient by a category" value={incategory} onChange={e => setInCategory(e.target.value)}/>
       {listPatientByCat}    
     </div>
     
