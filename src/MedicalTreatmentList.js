@@ -13,9 +13,9 @@ function MedicalTreatmentList(props){
     {Patient.category},
     {Patient.startDate}
    </li>);
-
-   //const listPatientCategoryJSON = patients.filter(Patient=> Patient.category).map(PatientFiltered=>(<li>{PatientFiltered.category}</li>));  
-  
+   const listPatientByCat= patients.filter(Patient=>Patient.category==incategory).map(Pfiltered=>(
+    <li>{Pfiltered}</li>));
+/*
     const listPatientByCat= patients.filter(Patient=>Patient.category==incategory).map(Pfiltered=>(
     <li>
       {Pfiltered.treatId},  
@@ -25,7 +25,7 @@ function MedicalTreatmentList(props){
       {Pfiltered.category},
       {Pfiltered.startDate}
     </li>));
-    
+*/
 return (
     <div>
       <h1>Medical Treatment List are:</h1>
