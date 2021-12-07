@@ -4,7 +4,7 @@ import MedicalTreatment from './MedicalTreatment';
 import MedicalTreatmentList from './MedicalTreatmentList';
 import MedicalTreatmentPanel from './MedicalTreatmentPanel';
 import '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js';
-import '//code.jquery.com/jquery-1.11.1.min.js';
+//import '//code.jquery.com/jquery-1.11.1.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
   const MedicalTreatList = [
