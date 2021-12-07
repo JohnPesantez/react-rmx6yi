@@ -4,7 +4,7 @@ function MedicalTreatmentList(props){
   const patientrecords =props.patientJson; 
   const patients = JSON.parse(patientrecords);
   const [incategory, setInCategory]=React.useState('');
-  const  listpatientJSON = patients.map((Patient)=>
+  /*const  listpatientJSON = patients.map((Patient)=>
   <li key={Patient.treatId}>
     {Patient.treatId},  
     {Patient.patientName},  
@@ -13,7 +13,7 @@ function MedicalTreatmentList(props){
     {Patient.category},
     {Patient.startDate}
    </li>);
-
+*/
    //const listPatientCategoryJSON = patients.filter(Patient=> Patient.category).map(PatientFiltered=>(<li>{PatientFiltered.category}</li>));  
   
     const listPatientByCat= patients.filter(Patient=>Patient.category==incategory).map(Pfiltered=>(
